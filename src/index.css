@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  scroll-behavior: smooth;
+}
+
+html {
+  scrollbar-color: rgba(96, 165, 250, 0.45) transparent;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #f5f9ff;
+}
+
+::selection {
+  background: rgba(96, 165, 250, 0.35);
+  color: white;
+}
+
+@layer base {
+  * {
+    @apply border-line;
+  }
+
+  body {
+    @apply min-h-screen bg-[#f5f9ff] text-slate-900 antialiased dark:bg-ink dark:text-white;
+  }
+
+  section {
+    @apply scroll-mt-28;
+  }
+
+  a,
+  button {
+    @apply outline-none;
+  }
+}
+
+@layer utilities {
+  .glass-panel {
+    @apply border border-white/10 bg-white/5 backdrop-blur-xl;
+  }
+}
